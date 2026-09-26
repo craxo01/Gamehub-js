@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(51, 51, 51));
+}
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 14rem;
+}
+a{
+  all: unset;
+  cursor: pointer;
+}
+.exit{
+  position: absolute;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  width: 8%;
+  height: 8%;
+  transform: translate(5%,-80%);
+  background-color:rgba(100, 100, 100, 0.171); ;
+  border-radius: 0.5rem;
+}
+.header-text {
+  color: #ffff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.level {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  visibility: visible;
+  opacity: 100;
+  transition: all 300ms ease-in 20ms;
+}
+.item {
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 10rem;
+  background-color: rgba(100, 100, 100, 0.171);
+  border-radius: 2rem;
+  font-size: 2rem;
+  transition: all 140ms ease-in 20ms;
+  cursor: pointer;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: -10rem;
+  transition: all 300ms ease-in 20ms;
+}
+.turn {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: -10rem;
+  transition: all 300ms ease-in 20ms;
+}
+.game-container {
+  color: #ffff;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 2rem;
+  margin-top: -18.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in 20ms;
+}
+.palyer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+  height: 10rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(99, 0, 56, 0.521),
+    rgba(1, 1, 103, 0.526)
+  );
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  transition: all 140ms ease-in 20ms;
+  grid-column: 1/3;
+}
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 5rem;
+  background-color: rgba(100, 100, 100, 0.171);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.again {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: 24rem;
+  width: 20rem;
+  height: 5rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(15, 2, 154, 0.521),
+    rgba(10, 10, 214, 0.526)
+  );
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  transition: all 140ms ease-in 20ms;
+  grid-column: 1/3;
+  cursor: pointer;
+}
+.switch {
+  background-color: burlywood;
+}
+/* ================= Tablet ================= */
+
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+    margin-top: 10rem;
+  }
+
+  .item,
+  .palyer {
+    width: 18rem;
+  }
+
+  .header-text {
+    font-size: 1.8rem;
+  }
+
+  .again {
+    margin-top: 22rem;
+    width: 18rem;
+  }
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin-top: 5rem;
+  }
+
+  .header-text {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .level,
+  .number,
+  .turn {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .item {
+    width: 90%;
+    max-width: 18rem;
+    height: 4.8rem;
+    font-size: 1.4rem;
+    border-radius: 1.2rem;
+  }
+
+  .game-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: -16rem;
+  }
+
+  .palyer {
+    width: 90%;
+    max-width: 18rem;
+    height: 8rem;
+    font-size: 1.3rem;
+    border-radius: 1.5rem;
+  }
+
+  .option {
+    width: 90%;
+    max-width: 8rem;
+    height: 4rem;
+    font-size: 1.2rem;
+  }
+
+  .again {
+    width: 90%;
+    max-width: 18rem;
+    height: 4.5rem;
+    margin-top: 21rem;
+    font-size: 1.3rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* ================= Small Phones ================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    margin-top: 3rem;
+  }
+
+  .header-text {
+    font-size: 1.35rem;
+    margin-top: 1rem;
+  }
+
+  .item {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.2rem;
+  }
+
+  .game-container {
+    row-gap: 0.8rem;
+    column-gap: 0rem;
+    margin-top: -15rem;
+  }
+
+  .palyer {
+    width: 100%;
+    height: 7rem;
+    font-size: 1.1rem;
+  }
+
+  .option {
+    width: 100%;
+    height: 3.6rem;
+    font-size: 1rem;
+  }
+
+  .again {
+    width: 100%;
+    height: 4rem;
+    margin-top: 20rem;
+    font-size: 1.1rem;
+  }
+}

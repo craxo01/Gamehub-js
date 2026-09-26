@@ -1,0 +1,498 @@
+@font-face {
+  font-family: "Vazir Light";
+  src:
+    local("Vazir Light"),
+    url(./font/Vazir-Light-FD-WOL.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Vazir Thin";
+  src:
+    local("Vazir Thin"),
+    url(./font/Vazir-Thin-FD-WOL.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Vazir Medium";
+  src:
+    local("Vazir Medium"),
+    url(./font/Vazir-Medium-FD-WOL.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Vazir FD";
+  src:
+    local("Vazir FD"),
+    url(./font/Vazir-FD-WOL.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Vazir Bold";
+  src:
+    local("Vazir BOld"),
+    url(./font/Vazir-Bold-FD-WOL.woff2) format(woff2);
+}
+/*///////////////////////////////////*/
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/font/poppins/poppins-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/font/poppins/poppins-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/font/poppins/poppins-medium-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/font/poppins/poppins-semibold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/font/poppins/poppins-regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/font/poppins/poppins-light-webfont.woff") format("woff");
+}
+:root {
+  --background-org: #03040a;
+  --header: #05060d;
+  --background-Cart: #080a14;
+  --hover-Cart: #0d1020;
+  --pink: #ff4fcb;
+  --blune: #3b82f6;
+  --pinkne: #ec3fa9;
+  --purple: #a855f7;
+}
+html{
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: poppins;
+  background-color: var(--background-org);
+  overflow-x: hidden;
+}
+
+/**************header*************/
+header {
+  background-color: var(--header);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  margin: 1rem 2rem;
+}
+.header-left {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.header-left span {
+  color: var(--pink);
+}
+.header-left p {
+  color: #fafafa;
+}
+ul {
+  color: #fafafa;
+  font-family: "Vazir Medium";
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 10rem;
+  list-style: none;
+}
+ul li {
+  border-bottom: 1px solid transparent;
+  padding: 1rem 0rem;
+  transition: all 140ms ease-in 20ms;
+  cursor: pointer;
+}
+.header-left img {
+  width: 40px;
+  height: 40px;
+  border-radius: 2rem;
+}
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  /* استایل خودت */
+  direction: rtl;
+  font-family: "Vazir Medium";
+  color: #fafafa;
+  width: 150px;
+  padding: 12px;
+  font-size: 16px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #555;
+  border-radius: 2rem;
+  padding: 0 0.5rem 0rem 0rem;
+}
+.search img {
+  width: 30px;
+  height: 20px;
+}
+.box-log {
+  font-family: "Vazir Medium";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  color: #fafafa;
+  border-radius: 2rem;
+  background-image: linear-gradient(135deg, var(--pink), var(--blune));
+  cursor: pointer;
+}
+.box-log img {
+  width: 30px;
+  height: 30px;
+}
+.hover {
+  color: var(--pink);
+
+  border-bottom-color: var(--pink);
+}
+.mosun {
+  width: 40px;
+  height: 35px;
+}
+.change-mood {
+  background-color: var(--background-org);
+  border-width: 0px;
+  cursor: pointer;
+  border-radius: 10rem;
+}
+.img-slide {
+  width: 1280px;
+  height: 450px;
+}
+.sectionslider {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.div-slide {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.slide {
+  position: absolute;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 4rem;
+  cursor: pointer;
+  border: 0;
+  background-color: #41414190;
+}
+.slider-button-left {
+  transform: translate(-580px, 200px);
+}
+.slider-button-right {
+  transform: translate(580px, 200px);
+}
+.dots {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+}
+.dots__dot {
+  width: 5px;
+  height: 10px;
+  border-radius: 1rem;
+  border: 0;
+  background-color: #fafafa;
+  transform: translate(0, 420px);
+  opacity: 50%;
+  cursor: pointer;
+}
+.dots__dot--active {
+  opacity: 1;
+}
+.flex-middle-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.flex-middle-text::before {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-image: linear-gradient(to left, var(--pink), transparent);
+}
+.flex-middle-text::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--purple), transparent);
+}
+.middle-text {
+  font-family: "Vazir Medium";
+  color: #fafafa;
+}
+/*.left-text{
+  background-image: linear-gradient(to left,var(--pink),transparent);
+}*/
+.flex-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  gap: 1rem;
+  margin: auto;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #fafafa;
+  border-radius: 0.5rem;
+  background-color: var(--background-Cart);
+  font-family: "Vazir Medium";
+}
+.cart-header-img {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.text-header-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.cart-logo-img {
+  width: 40px;
+  height: 40px;
+}
+.text-under-header-cart {
+  direction: rtl;
+  margin: 0;
+  color: #a2a2a2;
+  font-size: 0.8rem;
+}
+.flex-end-cart {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+.button-start-game {
+  background-image: linear-gradient(to left, var(--pink), var(--blune));
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 0.8rem;
+  width: 100px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.button-start-game-img {
+  width: 35px;
+}
+.button-start-game:hover{
+  opacity: 80%;
+}
+.div-left-end-cart {
+  background-color: var(--pinkne);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  width: 100px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.div-left-end-cart:hover{
+  opacity: 80%;
+}
+.zhanr-plane {
+  position: absolute;
+  text-align: center;
+  background-color: #ec3faa55;
+  color: var(--pinkne);
+  border-radius: 0.5rem;
+  width: 80px;
+  transform: translate(160%, 20%);
+}
+.zhanr-memory {
+  position: absolute;
+  text-align: center;
+  background-color: #00ff7b75;
+  color: #00ff7b;
+  border-radius: 0.5rem;
+  width: 80px;
+  transform: translate(160%, 20%);
+}
+.zhanr-secret {
+  position: absolute;
+  text-align: center;
+  background-color: #3b83f656;
+  color: var(--blune);
+  border-radius: 0.5rem;
+  width: 80px;
+  transform: translate(160%, 20%);
+}
+/***********footer***********/
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-Cart);
+  gap: 0rem;
+  font-family: "Vazir Medium";
+  width: 70%;
+  margin: 2rem auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #575757;
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+}
+.footer-box {
+  background-color: var(--background-Cart);
+  color: #fafafa;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  padding: 1rem 4rem;
+}
+.text-top-footer {
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.text-bottom-footer {
+  grid-column: 1/3;
+  margin: 0;
+  font-size: 0.8rem;
+}
+footer img {
+  width: 100%;
+  height: 100%;
+}
+.border-footer {
+  border-width: 0px 1px 0px 1px;
+  border-image: linear-gradient(to top, transparent, #3d3d3d, transparent) 1;
+  border-style: solid;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+.section-data {
+  position: fixed;
+  transform: translate(50%, -250%);
+  width: 50%;
+  height: 60%;
+  font-size: 1.2em;
+  display: none;
+  font-family: "Vazir Medium";
+  direction: rtl;
+ z-index: 10;
+}
+.close-data {
+  position: absolute;
+  font-weight: 600;
+  font-family: poppins;
+  background-color: transparent;
+  color: var(--background-org);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.data {
+  color: #fafafa;
+  text-align: center;
+}
+.section-data-1 {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--pinkne),
+    var(--purple)
+  );
+  width: 100%;
+  height: 100%;
+}
+.section-data-2 {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--pinkne),
+    var(--purple)
+  );
+  width: 100%;
+  height: 100%;
+}
+.section-data-3 {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--pinkne),
+    var(--purple)
+  );
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+.hidden{
+  visibility: hidden;
+}

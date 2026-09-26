@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: rgb(27, 27, 27);
+}
+.header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.between {
+  color: white;
+}
+.left-header{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.again {
+  width: 115px;
+  height: 65px;
+  font-size: 20px;
+  cursor: pointer;
+}
+a{
+  all: unset;
+  cursor: pointer;
+}
+.exit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  background-color: #fafafa;
+}
+.exit:hover{
+  opacity: 80%;
+}
+.guess {
+  text-align: center;
+  color: white;
+
+  font-size: 45px;
+  font-weight: 700;
+}
+.orgnumber {
+  margin: auto;
+  color: rgb(27, 27, 27);
+  background-color: white;
+  width: 150px;
+  height: 125px;
+  font-size: 75px;
+  text-align: center;
+  padding-top: 8px;
+}
+.flex-org-main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+}
+.rightup {
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+.input {
+  width: 250px;
+  height: 125px;
+  background-color: rgb(27, 27, 27);
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.cheak {
+  margin-top: 1rem;
+  width: 125px;
+  height: 70px;
+  font-size: 22px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(214, 214, 214);
+}
